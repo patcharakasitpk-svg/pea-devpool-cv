@@ -1,0 +1,236 @@
+/* ===========================================================
+   DESIGN TOKENS
+   โทนเดียวคือ ขาว-ดำ-เทา (monochrome) ไม่มีสีเด่น ให้ความรู้สึก
+   เรียบและเป็นมืออาชีพ ตามแบบในรูปตัวอย่าง
+   =========================================================== */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f7f6;
+  --text: #16181a;
+  --text-dim: #6b6f76;
+  --line: #e7e6e3;
+  --radius: 14px;
+  --font: "Inter", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* เส้นแบ่ง section บาง ๆ แบบในรูปตัวอย่าง */
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ปุ่ม/ลิงก์ที่มีลูกศร ↗ ต่อท้าย ใช้ซ้ำหลายที่ */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font);
+  color: inherit;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+/* ===========================================================
+   SECTION 1 — HERO
+   flex 2 คอลัมน์: รูปวงกลม | ข้อความ
+   =========================================================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 28px 56px;
+}
+
+.hero-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;     /* ทำให้เป็นวงกลม */
+  overflow: hidden;       /* ตัดรูปส่วนเกินทรงสี่เหลี่ยมออก */
+  background: var(--bg-soft);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* รูปไม่บี้ ไม่ยืดผิดสัดส่วน */
+  display: block;
+}
+
+.photo-placeholder {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-content { flex: 1; min-width: 280px; }
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.hero-title span { color: var(--text-dim); font-weight: 600; }
+
+.hero-sub {
+  color: var(--text-dim);
+  max-width: 480px;
+  margin: 0 0 20px;
+}
+
+/* ===========================================================
+   SECTION 2 — ABOUT (grid 2 คอลัมน์: เนื้อหา 2 ส่วน / sidebar 1 ส่วน)
+   =========================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 28px;
+}
+
+.about-main p { color: var(--text-dim); max-width: 620px; }
+
+/* ส่วนเพิ่มเติมที่ซ่อนไว้ก่อน — JS จะสลับ class นี้ */
+.about-extra {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.about-extra.is-open {
+  display: block;
+  max-height: none;
+}
+
+#toggleArrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#toggleArrow.is-open {
+  transform: rotate(90deg); /* ↗ หมุนเป็น ↘ ตอนเปิด ให้รู้ว่ากดแล้ว */
+}
+
+.about-sidebar { border-left: 1px solid var(--line); padding-left: 32px; }
+
+.sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.timeline-item { margin-bottom: 24px; }
+.timeline-item .role { font-weight: 700; margin: 0; }
+.timeline-item .org,
+.timeline-item .period {
+  color: var(--text-dim);
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+}
+
+/* ===========================================================
+   SECTION 3 — carbonMICE PROJECT
+   =========================================================== */
+.project {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 28px;
+}
+
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.project-role {
+  color: var(--text-dim);
+  font-weight: 500;
+  margin: 0;
+}
+
+.project-header .link-arrow { margin-left: auto; }
+
+.project-desc {
+  color: var(--text-dim);
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+
+.project-preview {
+  height: 320px;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-label {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+/* ===========================================================
+   SECTION 4 — CONTACT / FOOTER
+   =========================================================== */
+.contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+}
+
+.contact p { color: var(--text-dim); }
+
+/* ===========================================================
+   MOBILE
+   =========================================================== */
+@media (max-width: 720px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+  .hero { padding: 48px 20px 40px; }
+}
