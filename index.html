@@ -1,113 +1,25 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[ชื่อคุณ] — DevPool Application</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-
-  <!-- ============================================
-       SECTION 1: HERO
-       โครง: รูปวงกลม (ซ้าย) + หัวข้อใหญ่ + ปุ่ม Contact (ขวา)
-       ============================================ -->
-  <section class="hero">
+  <section class="hero"></section>
     <div class="hero-photo">
-      <!-- ใส่ไฟล์รูปชื่อ profile.jpg ไว้โฟลเดอร์เดียวกับไฟล์นี้ -->
-      <img src="profile.jpg" alt="รูปโปรไฟล์"
-           onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';">
-      <div class="photo-placeholder" id="photoPlaceholder">รูปคุณ<br>ตรงนี้</div>
+      <img src="winnerpic.png" alt="รูปโปรไฟล์">
     </div>
-
-    <div class="hero-content">
-      <h1 class="hero-title">Hellow i'am winner <br><span>co-fouder carbonMICE</span></h1>
-      <p class="hero-sub">[ใส่คำอธิบายสั้น ๆ เกี่ยวกับตัวเอง 1-2 บรรทัด — เหตุผลที่อยากเข้า DevPool ก็ใส่ตรงนี้ได้]</p>
-      <a href="#contact" class="link-arrow">ติดต่อผม <span aria-hidden="true">↗</span></a>
-    </div>
+    <div class="head">
+      <h1>Hello i'am winner A Product Designer.</h1>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisci elit dapibus porta lorem morbi hendrerit.</h3>
+    <div>
+  <a href="URL">contact me</a>
+</div>
   </section>
-
-  <hr class="divider">
-
-  <!-- ============================================
-       SECTION 2: ABOUT + PAST EXPERIENCE
-       โครง: 2 คอลัมน์ — ซ้ายเนื้อหายาว / ขวา timeline สั้น ๆ
-       ============================================ -->
-  <section class="about-grid">
-
-    <div class="about-main">
-      <h2 class="section-title">about me</h2>
-      <p>[พารากราฟแรก — เล่าพื้นฐาน เช่น จบอะไร ทำงานอะไรอยู่ที่ กฟภ.]</p>
-      <p>[พารากราฟสอง — สิ่งที่สนใจ เช่น embedded systems, IoT, AC power measurement]</p>
-
-      <!-- ส่วนที่ซ่อนไว้ก่อน จะโผล่มาตอนกดปุ่มด้านล่าง -->
-      <p class="about-extra" id="aboutExtra">[พารากราฟเพิ่มเติม — รายละเอียดที่ไม่จำเป็นต้องเห็นตั้งแต่แรก เช่น ประวัติเพิ่มเติม, เป้าหมายระยะยาว]</p>
-
-      <button id="toggleAboutBtn" class="link-arrow link-button">
-        อ่านเพิ่มเติม <span aria-hidden="true" id="toggleArrow">↗</span>
-      </button>
-    </div>
-
-    <aside class="about-sidebar">
-      <h3 class="sidebar-title">ประสบการณ์ที่ผ่านมา</h3>
-
-      <div class="timeline-item">
-        <p class="role">[ตำแหน่งปัจจุบัน]</p>
-        <p class="org">[หน่วยงาน/แผนก]</p>
-        <p class="period">[ปีเริ่ม] — ปัจจุบัน</p>
-      </div>
-
-      <div class="timeline-item">
-        <p class="role">[ตำแหน่งก่อนหน้า]</p>
-        <p class="org">[หน่วยงาน/แผนก]</p>
-        <p class="period">[ปี] — [ปี]</p>
-      </div>
-
-      <div class="timeline-item">
-        <p class="role">[การศึกษา เช่น วิศวกรรมคอมพิวเตอร์]</p>
-        <p class="org">[สถาบัน]</p>
-        <p class="period">[ปี] — [ปี]</p>
-      </div>
-    </aside>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ============================================
-       SECTION 3: carbonMICE (co-founder project)
-       ตามที่ขอ — เนื้อหา section นี้เป็นภาษาอังกฤษทั้งหมด
-       ============================================ -->
-  <section class="project">
-    <div class="project-header">
-      <h2 class="section-title">carbonMICE</h2>
-      <p class="project-role">Co-founder</p>
-      <a href="#" class="link-arrow">Visit project <span aria-hidden="true">↗</span></a>
-    </div>
-
-    <p class="project-desc">
-      [TODO: One or two sentences describing what carbonMICE does — e.g. a platform that helps
-      organizations measure and manage the carbon footprint of MICE (Meetings, Incentives,
-      Conferences, Exhibitions) events.]
-    </p>
-
-    <div class="project-preview">
-      <!-- ใส่ภาพ screenshot จริงของ carbonMICE ตรงนี้ทีหลัง: <img src="carbonmice-preview.jpg" ...> -->
-      <span class="preview-label">[ใส่ภาพ screenshot ของ carbonMICE ที่นี่]</span>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ============================================
-       SECTION 4: CONTACT / FOOTER
-       ============================================ -->
-  <footer class="contact" id="contact">
-    <h2 class="section-title">ติดต่อผม</h2>
-    <p>[email@example.com] · [ลิงก์ LinkedIn/GitHub ถ้ามี]</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
