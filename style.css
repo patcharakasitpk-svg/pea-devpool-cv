@@ -1,18 +1,18 @@
 body {
-  background-color: #fbfbfb;  /* ม่วงพาสเทลอ่อนมาก */
+  background-color: #fbfbfb;  
   font-family: "Inter", sans-serif;
 }
 
 h1 {
-  color: #16181a;  /* ดำเข้ม (ไม่ใช้ดำสนิท #000 เพราะดูแข็งไป) */
+  color: #16181a;  
 }
 
 p {
-  color: #6b6f76;  /* เทา */
+  color: #6b6f76;  
 }
 
 a {
-  color: #000000;  /* ดำเข้ม (ไม่ใช้ดำสนิท #000 เพราะดูแข็งไป) */
+  color: #000000;  
 }
 
 .hero-photo {
@@ -49,10 +49,58 @@ a {
 }
 
 .hero,
-.about {
+.about,
+.Portfolio  {
   background-color: #FFFFFF;
   padding: 48px;
   margin: 24px auto;
   max-width: 1100px;
   
+}
+
+.Portfolio {
+  padding-top: 10px;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  
+  max-width: 100px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.project-wrapper.is-open {
+  max-height: 600px;   /* ต้องสูงพอให้เนื้อหาข้างในไม่ถูกตัด */
+}
+
+#togglePortfolioBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 16px;
 }
