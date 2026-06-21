@@ -83,3 +83,45 @@ width: 100%;
 height: auto;
 display: block;
 }
+
+.faq-divider {
+  border: none;
+  border-top: 1px solid #e7e6e3;
+  margin: 0;
+}
+
+.faq-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 24px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #16181a;
+  text-align: left;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.chevron.is-open {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer.is-open {
+  max-height: 600px;
+  padding-bottom: 24px;
+}
