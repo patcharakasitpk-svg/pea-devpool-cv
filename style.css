@@ -78,7 +78,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 32px;
 }
@@ -103,8 +102,7 @@ a {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 24px 0;
-  font-family: "Inter", sans-serif;
+  padding: 24px ;
   font-size: 1.05rem;
   font-weight: 700;
   color: #16181a;
