@@ -12,7 +12,7 @@
 - **About Me** — เล่าความสนใจด้าน Digital Transformation, Agile และ Product Development พร้อมประสบการณ์ที่ผ่านมา
 - **Portfolio** — แสดงผลงาน (carbonMICE Admin Console) แบบ accordion เปิด-ปิดได้
 - **Books That Shaped My Perspective** — ดึงข้อมูลและปกหนังสือแบบเรียลไทม์จาก [Open Library API](https://openlibrary.org/) ตามรายการ ISBN
-- **Responsive Design** — รองรับการแสดงผลบนหน้าจอหลายขนาด
+
 
 ## 🛠️ Tech Stack
 
