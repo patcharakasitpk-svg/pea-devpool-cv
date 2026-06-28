@@ -16,18 +16,12 @@ const isbnList = [
   { isbn: '9780465050659', label: 'The Design of Everyday Things' },
   { isbn: '9781708315955', label: 'Master Your Emotions' },
   { isbn: '9781846683954', label: 'The decision book' },
-  { isbn: '9780241982280', label: 'Communication Book'},
-  { isbn: '9780986022043', label: 'Communication Book'},
-  { isbn: '9781577313366', label: 'Communication Book'},
-  { isbn: '9781800814646', label: 'Communication Book'},
-  { isbn: '9780593716625', label: 'Communication Book'},
-  { isbn: '9780007467976', label: 'Communication Book'},
-  
-  
-  
-  
-  
-  
+  { isbn: '9780241982280', label: 'The Power of Now'},
+  { isbn: '9780986022043', label: 'SEARCH INSIDE YOURSELF'},
+  { isbn: '9781577313366', label: 'The Art Of Spending Money'},
+  { isbn: '9781800814646', label: 'The 15 Invaluable Laws of Growth Participant Guide'},
+  { isbn: '9780593716625', label: 'The Get Things Done Book'},
+  { isbn: '9780007467976', label: 'Communication Book'}
 ];
 
 bookList.innerHTML = '';

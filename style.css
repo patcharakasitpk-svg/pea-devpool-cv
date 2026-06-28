@@ -77,9 +77,15 @@ a {
 .portfolio-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 24px;
   margin-bottom: 32px;
+}
+
+
+.all-projects {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .project-card img {
@@ -87,6 +93,7 @@ a {
   height: auto;
   display: block;
 }
+
 
 .faq-divider {
   border: none;
