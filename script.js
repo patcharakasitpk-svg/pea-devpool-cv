@@ -21,7 +21,9 @@ const isbnList = [
   { isbn: '9781577313366', label: 'The Art Of Spending Money'},
   { isbn: '9781800814646', label: 'The 15 Invaluable Laws of Growth Participant Guide'},
   { isbn: '9780593716625', label: 'The Get Things Done Book'},
-  { isbn: '9780007467976', label: 'Communication Book'}
+  { isbn: '9780007467976', label: 'Communication Book'},
+  { isbn: '9781572245372', label: 'The Untethered Soul'},
+  { isbn: '9781399734837', label: 'Confidence'}
 ];
 
 bookList.innerHTML = '';
@@ -41,13 +43,13 @@ isbnList.forEach(({ isbn, label }) => {
       const bookTitle = book.title || label;
       const bookAuthor = (book.authors && book.authors[0]) ? book.authors[0].name : 'ไม่พบผู้เขียน';
 
-      bookList.innerHTML += `
-        <div class="book-card">
-          <img src="https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg" alt="ปก ${bookTitle}">
-          <p class="book-title">${bookTitle}</p>
-          <p class="book-author">${bookAuthor}</p>
-        </div>
-      `;
+bookList.innerHTML += `
+  <div class="book-card">
+    <img src="https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg" alt="ปก ${bookTitle}">
+    <p class="book-title">${bookTitle}</p>
+    <p class="book-author">${bookAuthor}</p>
+  </div>
+`;
     })
     .catch(error => {
       console.log(`เกิด error ตอนโหลด "${label}":`, error.message);
